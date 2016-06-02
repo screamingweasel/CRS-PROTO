@@ -29,6 +29,11 @@
         <![endif]-->
 
         <script src="assets/js/modernizr.min.js"></script>
+        <script>
+        	function fooBar() {
+        		document.getElementById("ddlLocation").selectedIndex = "1";
+        	}
+        </script>
 
     </head>
     <body>
@@ -49,13 +54,14 @@
 
 						<div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Username">
+                                <input class="form-control" type="text" required="" placeholder="Username" 
+                                onBlur="fooBar();">
                             </div>
                         </div>
                         
                         <div class="form-group ">
                         <div class="col-xs-12">
-                         <select class="form-control">
+                         <select class="form-control" name="ddlLocation" id="ddlLocation">
                                                     <option>Location</option>
                                                     <option>Los Angeles (3412)</option>
                                                     <option>San Diego (1234)</option>
@@ -63,10 +69,14 @@
                                                     <option>San Francisco (5632)</option>
                                                 </select>
 						</div></div>
-
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <input class="form-control" type="password" required="" placeholder="Password">
+                            </div>
+                        </div>						
+						<div class="form-group">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="password" required="" placeholder="Pin">
                             </div>
                         </div>
 
